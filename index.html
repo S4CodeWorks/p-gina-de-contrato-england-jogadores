@@ -1,20 +1,91 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seleção England</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <!-- Primary Meta Tags -->
+  <title>Seleção England - Acordo Oficial do Jogador</title>
+  <meta name="title" content="Seleção England - Acordo Oficial do Jogador">
+  <meta name="description" content="Portal oficial para assinatura de contratos da Seleção England. Sistema seguro e eficiente para formalização de acordos com jogadores.">
+  <meta name="keywords" content="seleção england, acordo jogador, contrato futebol, football contract, england selection">
+  <meta name="author" content="S4 CodeWorks">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://s4codeworks.github.io/p-gina-de-contrato-england-jogadores/">
+  <meta property="og:title" content="Seleção England - Acordo Oficial do Jogador">
+  <meta property="og:description" content="Portal oficial para assinatura de contratos da Seleção England. Sistema seguro e eficiente para formalização de acordos com jogadores.">
+  <meta property="og:image" content="icons/icon-512x512.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://s4codeworks.github.io/p-gina-de-contrato-england-jogadores/">
+  <meta property="twitter:title" content="Seleção England - Acordo Oficial do Jogador">
+  <meta property="twitter:description" content="Portal oficial para assinatura de contratos da Seleção England. Sistema seguro e eficiente para formalização de acordos com jogadores.">
+  <meta property="twitter:image" content="icons/icon-512x512.png">
+
+  <!-- PWA Meta Tags -->
+  <meta name="application-name" content="Seleção England">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Seleção England">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#CE1124">
+  <meta name="msapplication-TileColor" content="#CE1124">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- iOS Meta Tags & Icons -->
+  <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="icons/icon-152x152.png">
+  
+  <!-- Apple Splash Screen Images -->
+  <link rel="apple-touch-startup-image" href="icons/icon-512x512.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="mask-icon" href="favicon.svg" color="#CE1124">
+  <link rel="shortcut icon" href="favicon.svg">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Fonts and Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  
+  <!-- Cache Control -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 </head>
 <body>
   <div class="container">
     <header class="page-header">
-<div class="logo">
-  <img src="BackgroundEraser_20250215_165150273.png" alt="Logo" width="80" height="80">
-</div>
+      <div class="logo">
+        <svg width="48" height="48" viewBox="0 0 48 48" class="logo-svg">
+          <defs>
+            <linearGradient id="gradientFill" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#CE1124;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#00247D;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="24" cy="24" r="22" fill="none" stroke="url(#gradientFill)" stroke-width="2.5"/>
+          <path d="M12 24h24M24 12v24" stroke="url(#gradientFill)" stroke-width="2.5"/>
+        </svg>
         <h1>Seleção England</h1>
       </div>
     </header>
@@ -92,5 +163,19 @@
     </main>
   </div>
   <script src="script.js"></script>
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registered:', registration);
+          })
+          .catch(error => {
+            console.log('ServiceWorker registration failed:', error);
+          });
+      });
+    }
+  </script>
 </body>
 </html>
